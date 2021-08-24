@@ -2,7 +2,9 @@
   "name": "robofriends",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sahilthakur7.github.io/robofriends",
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.4",
@@ -16,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -28,6 +32,16 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   }
 }
